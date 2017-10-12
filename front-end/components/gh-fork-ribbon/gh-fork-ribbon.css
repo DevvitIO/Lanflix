@@ -1,0 +1,9 @@
+/* This css file is basicly useless, but it demostrates that you can write your own css file for your component */
+
+.ribbon-link:hover {
+    cursor: default;
+}
+
+.ribbon-link img:hover {
+    cursor: pointer;
+}
