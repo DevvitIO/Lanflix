@@ -67,6 +67,8 @@ For the Javascript file we use the attribute [defer](https://developer.mozilla.o
 ## Component [playground](https://github.com/DevvitIO/Lanflix/blob/master/front-end/component-playground)
 To give people the option to see which components are already available, the project has an overview of the components. The playground can be accessed under http://localhost:3000/playground (the project needs to be running). This page should ideally show every component, but currently it is dependent on the developer to add it to the page. It currently shows two example components. To add another one, please load the CSS and Javascript files the same way as above and add an entry to the navigation and copy/edit an ```<article>``` element. 
 
+![playground](https://github.com/DevvitIO/Lanflix/blob/master/docs/img/playground.PNG?raw=true)
+
 ## Issues
 For the most part issues will tell you to develop a new component. We try to work our way from the smallest possible elements (e.g. button, input,...) up to bigger ones (e.g. sign in, dynamic drop down,...). Please always check if there are already components you can use for your implementation. For example a sign in form certainly will need some ```<input>``` fields, rather than styling it your own check if there already is a ".lf-input" you can use. This keeps the styling consistent throughout the page. 
 
