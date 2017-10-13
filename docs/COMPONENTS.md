@@ -13,7 +13,7 @@ As mentioned before, if the component only requires a specific style a CSS file 
  #### Use the Component
 
  ```html
- <div class=".lf-fh-fork-ribbon"></div>
+ <div class="lf-fh-fork-ribbon"></div>
  ```
 
  #### Components HTML ([gh-fork-ribbon.html](https://github.com/DevvitIO/Lanflix/blob/master/front-end/components/gh-fork-ribbon/gh-fork-ribbon.html))
