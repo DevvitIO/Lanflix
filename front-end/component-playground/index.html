@@ -7,9 +7,10 @@
             body { display: flex; }
             
             a { color: inherit; }
+            h2 { margin-top: 30px; }
             
-            section, aside { padding: 10px; overflow-y: auto;}
-            aside {
+            section, nav { padding: 10px; overflow-y: auto;}
+            nav {
                 background-color: darkslategrey;
                 width: 15%;
                 min-width: 200px;
@@ -17,49 +18,111 @@
                
             }
 
-            aside h3 { background-color: rgba(0,0,0,0.5); padding: 10px 20px; margin: 0 -10px; color: rgba(255,255,255,1); font-weight: 100;  }
-            aside ul { list-style: none; padding: 0; }
-            aside li { margin: 3px 0; padding: 7px 10px; color: rgba(255,255,255,0.5);  }
-            aside li:hover { background-color: rgba(255,255,255,0.1); border-radius: 3px; cursor: pointer;  color: rgba(255,255,255,0.75);  }
-            aside li a { text-decoration: none; display: block; }
+            nav h3 { background-color: rgba(0,0,0,0.5); padding: 10px 20px; margin: 0 -10px; color: rgba(255,255,255,1); font-weight: 100;  }
+            nav ul { list-style: none; padding: 0; }
+            nav li { margin: 3px 0; padding: 7px 10px; color: rgba(255,255,255,0.5);  }
+            nav li:hover { background-color: rgba(255,255,255,0.1); border-radius: 3px; cursor: pointer;  color: rgba(255,255,255,0.75);  }
+            nav li a { text-decoration: none; display: block; }
 
+            section { flex-grow: 1; padding: 15px 30px; }
+            article {
+                background-color: rgba(47,79,79,0.1);
+                padding: 15px;
+            }
 
-            section {
+            .preview { display: flex; }
+            .preview > div {
                 flex-grow: 1;
             }
+
+            .preview > :first-child { margin-right: 7px; }
+            .preview > :last-child { margin-left: 7px; }
         </style>
 
-        <link rel="stylesheet" href="../components/gh-fork-ribbon/gh-fork-ribbon.css">
+        <!-- External CSS Resources --> 
+        <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+
+        <!-- Components CSS -->
+        <link rel="stylesheet" href="./components/basic/button.css">
+        <link rel="stylesheet" href="./components/gh-fork-ribbon/gh-fork-ribbon.css">
+            
+        <!-- External JS Resources -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script defer>hljs.initHighlightingOnLoad();</script>
+
+        <!-- Components Javascript -->
+        <script src="./components/gh-fork-ribbon/gh-fork-ribbon.js" defer></script>
     </head>
 
     <body>
-        <aside>
+        <nav>
             <h3>Basic Components</h3>
             <ul>
-                <li>lf-button</li>
+                <li><a href="#lf-button">lf-button</a></li>
+            </ul>
+
+            <h3>Other Components</h3>
+            <ul>
                 <li><a href="#lf-gh-fork-ribbon">lf-gh-fork-ribbon</a></li>
             </ul>
+
             <h3>Video Components</h3>
             <ul>
-                <li>lf-button</li>
+                
             </ul>
  
-        </aside>
+        </nav>
         <section>
             <h1>Components</h1>
             <p>An overview of all developed components and how to use them</p>
            
+            <h2>Basic Components</h2>
+            <article>
+                    <a name="lf-button"></a>
+                    <h3>.lf-button</h3>
+                    <p>Lanflix button design (just an example, needs to be reworked)</p>
+    
+                    <div class="preview">
+                        <div>
+                            <h4>Usage</h4>
+                            <pre><code class="html hjs">
+&lt;button class="lf-button"&gt;Click me&lt;/button&gt;
+                            </code></pre>
+                        </div>
+                
+                        <div>
+                            <h4>Result</h4>
+                            <button class="lf-button">Click me</div>
+                        </div>
+                    </div>      
+                </article>
+            <h2>Other Components</h2>
             <article>
                 <a name="lf-gh-fork-ribbon"></a>
-                <h2>lf-gh-fork-ribbon</h2>
+                <h3>.lf-gh-fork-ribbon</h3>
                 <p>Displays the Github fork ribbon</p>
 
-                <div class="lf-gh-fork-ribbon"></div>
+                <div class="preview">
+                    <div>
+                        <h4>Usage</h4>
+                        <pre><code class="html hjs">
+&lt;div class="lf-gh-fork-ribbon"&gt;&lt;/div&gt;
+                        </code></pre>
+                    </div>
+            
+                    <div>
+                        <h4>Result</h4>
+                        <div class="lf-gh-fork-ribbon"></div>
+                    </div>
+                </div>      
             </article>
+
+            <h2>Video Components</h2>
 
         </section>
 
-        <script src="../components/gh-fork-ribbon/gh-fork-ribbon.js"></script>
+       
     </body>
 
 </html>
