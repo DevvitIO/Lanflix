@@ -10,7 +10,7 @@ To run this project you are required to install [nodejs](https://nodejs.org/en/)
 1. Clone or fork the project
 2. cd Lanflix
 3. npm install
-4. npm install -g nodemon
+4. (sudo) npm install -g nodemon
 5. npm start
 6. http://localhost:3000 or http://localhost:3000/playground
 
