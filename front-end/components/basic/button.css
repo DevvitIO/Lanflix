@@ -1,0 +1,16 @@
+button.lf-button {
+    background-color: #0f0f0f;
+    color: rgba(255,255,255,0.7);;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    transition: all ease .5s;
+}
+
+button.lf-button:hover {
+    color: rgba(255,255,255,0.9);
+    background-color: black;
+    cursor: pointer;
+    transition: all ease .5s;
+}

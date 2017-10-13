@@ -1,0 +1,29 @@
+{
+  "name": "lanflix",
+  "version": "1.0.0",
+  "description": "Lanflix is a Netflix like application for your LAN. It is developed by the [...]() community.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon . --ext js,css,html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LearnDevelopmentPublic/Lanflix.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LearnDevelopmentPublic/Lanflix/issues"
+  },
+  "homepage": "https://github.com/LearnDevelopmentPublic/Lanflix#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
