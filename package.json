@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ."
+    "start": "nodemon . --ext js,css,html"
   },
   "repository": {
     "type": "git",
