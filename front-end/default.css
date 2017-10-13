@@ -1,5 +1,12 @@
 html, body { padding: 0; margin: 0; }
 
+#playground {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.5;
+}
+
 #ribbon-wrapper {
     position: absolute; 
     top: 0; 
