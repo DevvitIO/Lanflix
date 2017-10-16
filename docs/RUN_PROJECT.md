@@ -4,9 +4,10 @@ This documentation helps you run the current setup. It is based on a NodeJS back
 ```
 
 ## Prerequisites 
-To run this project you are required to install [nodejs](https://nodejs.org/en/) which comes with the package manager [npm](https://www.npmjs.com/). Nodejs is a javascript runtime environment that allows developers to run javascript outside of the browser and access native OS features. NPM provides a way to install and manage 3rd party code we use in the project.  
+To run this project you are required to install [nodejs](https://nodejs.org/en/) which comes with the package manager [npm](https://www.npmjs.com/). Nodejs is a javascript runtime environment that allows developers to run javascript outside of the browser and access native OS features. NPM provides a way to install and manage 3rd party code we use in the project. You also need to install MongoDB \[[Community Server](https://www.mongodb.com/download-center?ct=false#community), [Install](https://docs.mongodb.com/manual/administration/install-community/)\]
 
 ## Install and Run
+1. Start Local MongoDB server
 1. Clone or fork the project
 2. cd Lanflix
 3. npm install
