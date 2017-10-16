@@ -31,3 +31,8 @@ For a more detailed look of the features and their status please take a look at 
 [How to run the project?](https://github.com/DevvitIO/Lanflix/blob/master/docs/RUN_PROJECT.md)
 
 [Components](https://github.com/DevvitIO/Lanflix/blob/master/docs/COMPONENTS.md)
+
+[MongoDB & MongooseJS](https://github.com/DevvitIO/Lanflix/blob/master/docs/MONGODB.md)
+
+[Routes & Controllers](https://github.com/DevvitIO/Lanflix/blob/master/docs/ROUTES_CONTROLLERS.md)
+
