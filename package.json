@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon . --ext js,css,html"
+    "start": "nodemon ./back-end --ext js,css,html",
+    "postinstall": "cd back-end && npm install"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,5 @@
   "homepage": "https://github.com/LearnDevelopmentPublic/Lanflix#readme",
   "devDependencies": {
     "nodemon": "^1.12.1"
-  },
-  "dependencies": {
-    "express": "^4.16.2"
   }
 }
