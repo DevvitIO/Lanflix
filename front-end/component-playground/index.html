@@ -1,128 +1,182 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Lanflix Component Playground</title>
-        <style>
-            html, body { padding: 0; margin: 0; font-family: Arial, Helvetica, sans-serif; height: 100%; overflow: hidden;}
-            body { display: flex; }
+<head>
+    <title>Lanflix Component Playground</title>
+    <style>
+        html, body { padding: 0; margin: 0; font-family: Arial, Helvetica, sans-serif; height: 100%; overflow: hidden;}
+        body { display: flex; }
+        
+        a { color: inherit; }
+        h2 { margin-top: 30px; }
+        
+        section, nav { padding: 10px; overflow-y: auto;}
+        nav {
+            background-color: darkslategrey;
+            width: 15%;
+            min-width: 200px;
+            color: white;
             
-            a { color: inherit; }
-            h2 { margin-top: 30px; }
-            
-            section, nav { padding: 10px; overflow-y: auto;}
-            nav {
-                background-color: darkslategrey;
-                width: 15%;
-                min-width: 200px;
-                color: white;
-               
-            }
-
-            nav h3 { background-color: rgba(0,0,0,0.5); padding: 10px 20px; margin: 0 -10px; color: rgba(255,255,255,1); font-weight: 100;  }
-            nav ul { list-style: none; padding: 0; }
-            nav li { margin: 3px 0; padding: 7px 10px; color: rgba(255,255,255,0.5);  }
-            nav li:hover { background-color: rgba(255,255,255,0.1); border-radius: 3px; cursor: pointer;  color: rgba(255,255,255,0.75);  }
-            nav li a { text-decoration: none; display: block; }
-
-            section { flex-grow: 1; padding: 15px 30px; }
-            article {
-                background-color: rgba(47,79,79,0.1);
-                padding: 15px;
-            }
-
-            .preview { display: flex; }
-            .preview > div {
-                flex-grow: 1;
-            }
-
-            .preview > :first-child { margin-right: 7px; }
-            .preview > :last-child { margin-left: 7px; }
-        </style>
-
-        <!-- External CSS Resources --> 
-        <link rel="stylesheet"
-        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
-
-        <!-- Components CSS -->
-        <link rel="stylesheet" href="./components/basic/button.css">
-        <link rel="stylesheet" href="./components/gh-fork-ribbon/gh-fork-ribbon.css">
-            
-        <!-- External JS Resources -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script defer>hljs.initHighlightingOnLoad();</script>
-
-        <!-- Components Javascript -->
-        <script src="./components/gh-fork-ribbon/gh-fork-ribbon.js" defer></script>
-    </head>
-
-    <body>
-        <nav>
-            <h3>Basic Components</h3>
-            <ul>
-                <li><a href="#lf-button">lf-button</a></li>
-            </ul>
-
-            <h3>Other Components</h3>
-            <ul>
-                <li><a href="#lf-gh-fork-ribbon">lf-gh-fork-ribbon</a></li>
-            </ul>
-
-            <h3>Video Components</h3>
-            <ul>
-                
-            </ul>
- 
-        </nav>
-        <section>
-            <h1>Components</h1>
-            <p>An overview of all developed components and how to use them</p>
-           
-            <h2>Basic Components</h2>
-            <article>
-                    <a name="lf-button"></a>
-                    <h3>.lf-button</h3>
-                    <p>Lanflix button design (just an example, needs to be reworked)</p>
+        }
+        
+        nav h3 { background-color: rgba(0,0,0,0.5); padding: 10px 20px; margin: 0 -10px; color: rgba(255,255,255,1); font-weight: 100;  }
+        nav ul { list-style: none; padding: 0; }
+        nav li { margin: 3px 0; padding: 7px 10px; color: rgba(255,255,255,0.5);  }
+        nav li:hover { background-color: rgba(255,255,255,0.1); border-radius: 3px; cursor: pointer;  color: rgba(255,255,255,0.75);  }
+        nav li a { text-decoration: none; display: block; }
+        
+        section { flex-grow: 1; padding: 15px 30px; }
+        article {
+            background-color: rgba(47,79,79,0.1);
+            padding: 15px;
+        }
+        
+        /*TITLE CARD*/
+        .lf-title-card{
+            width: 210px;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            margin: 10px 10px;
+            -webkit-transition: all .05s;
+            -moz-transition: all .05s;
+            -ms-transition: all .05s;
+            -o-transition: all .05s;
+            transition: all .05s;
+        }
+        
+        .lf-title{
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.81);
+            position: absolute;
+            color: #FFFFFF;
+            font-weight: bold;
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+        }
+        
+        .lf-cover{
+            width: 100%;
+        }
+        
+        .lf-title-card:hover{
+            width: 225px;
+            margin: 10px 15px;
+        }
+        
+        .preview { display: flex; }
+        .preview > div {
+            flex-grow: 1;
+        }
+        
+        .preview > :first-child { margin-right: 7px; }
+        .preview > :last-child { margin-left: 7px; }
+    </style>
     
-                    <div class="preview">
-                        <div>
-                            <h4>Usage</h4>
-                            <pre><code class="html hjs">
+    <!-- External CSS Resources -->
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+    
+    <!-- Components CSS -->
+    <link rel="stylesheet" href="./components/basic/button.css">
+    <link rel="stylesheet" href="./components/gh-fork-ribbon/gh-fork-ribbon.css">
+    
+    <!-- External JS Resources -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script defer>hljs.initHighlightingOnLoad();</script>
+    
+    <!-- Components Javascript -->
+    <script src="./components/gh-fork-ribbon/gh-fork-ribbon.js" defer></script>
+</head>
+
+<body>
+<nav>
+    <h3>Basic Components</h3>
+    <ul>
+        <li><a href="#lf-button">lf-button</a></li>
+    </ul>
+    
+    <h3>Other Components</h3>
+    <ul>
+        <li><a href="#lf-gh-fork-ribbon">lf-gh-fork-ribbon</a></li>
+    </ul>
+    
+    <h3>Video Components</h3>
+    <ul>
+    
+    </ul>
+    
+    <h3>Title Card</h3>
+    <ul>
+    
+    </ul>
+
+</nav>
+<section>
+    <h1>Components</h1>
+    <p>An overview of all developed components and how to use them</p>
+    
+    <h2>Basic Components</h2>
+    <article>
+        <a name="lf-button"></a>
+        <h3>.lf-button</h3>
+        <p>Lanflix button design (just an example, needs to be reworked)</p>
+        
+        <div class="preview">
+            <div>
+                <h4>Usage</h4>
+                <pre><code class="html hjs">
 &lt;button class="lf-button"&gt;Click me&lt;/button&gt;
                             </code></pre>
-                        </div>
-                
-                        <div>
-                            <h4>Result</h4>
-                            <button class="lf-button">Click me</div>
-                        </div>
-                    </div>      
-                </article>
-            <h2>Other Components</h2>
-            <article>
-                <a name="lf-gh-fork-ribbon"></a>
-                <h3>.lf-gh-fork-ribbon</h3>
-                <p>Displays the Github fork ribbon</p>
-
-                <div class="preview">
-                    <div>
-                        <h4>Usage</h4>
-                        <pre><code class="html hjs">
+            </div>
+            
+            <div>
+                <h4>Result</h4>
+                <button class="lf-button">Click me </button></div>
+        </div>
+        </div>
+    </article>
+    <h2>Other Components</h2>
+    <article>
+        <a name="lf-gh-fork-ribbon"></a>
+        <h3>.lf-gh-fork-ribbon</h3>
+        <p>Displays the Github fork ribbon</p>
+        
+        <div class="preview">
+            <div>
+                <h4>Usage</h4>
+                <pre><code class="html hjs">
 &lt;div class="lf-gh-fork-ribbon"&gt;&lt;/div&gt;
                         </code></pre>
-                    </div>
+            </div>
             
-                    <div>
-                        <h4>Result</h4>
-                        <div class="lf-gh-fork-ribbon"></div>
-                    </div>
-                </div>      
-            </article>
+            <div>
+                <h4>Result</h4>
+                <div class="lf-gh-fork-ribbon"></div>
+            </div>
+        </div>
+    </article>
+    
+    <article>
+        <style>
+        </style>
+        <h3>Title Card</h3>
+        <div class="lf-title-card">
+            <div class="lf-title">Rico and Morty</div>
+            <img class="lf-cover" src="https://static.tvmaze.com/uploads/images/medium_portrait/1/3603.jpg">
+        </div>
+        <div class="lf-title-card">
+            <div class="lf-title">Rico and Morty</div>
+            <img class="lf-cover" src="https://static.tvmaze.com/uploads/images/medium_portrait/1/3603.jpg">
+        </div>
+    </article>
+    
+    
+    <h2>Video Components</h2>
 
-            <h2>Video Components</h2>
+</section>
 
-        </section>
 
-       
-    </body>
+</body>
 
 </html>
