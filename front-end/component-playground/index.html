@@ -1,268 +1,268 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lanflix Component Playground</title>
-    <!--fontAwesome-->
-    <script src="https://use.fontawesome.com/0739902f59.js"></script>
-    <style>
-        html, body { padding: 0; margin: 0; font-family: Arial, Helvetica, sans-serif; height: 100%; overflow: hidden;}
-        body { display: flex; }
-        
-        a { color: inherit; }
-        h2 { margin-top: 30px; }
-        
-        section, nav { padding: 10px; overflow-y: auto;}
-        nav {
-            background-color: darkslategrey;
-            width: 15%;
-            min-width: 200px;
-            color: white;
-            
-        }
-        
-        nav h3 { background-color: rgba(0,0,0,0.5); padding: 10px 20px; margin: 0 -10px; color: rgba(255,255,255,1); font-weight: 100;  }
-        nav ul { list-style: none; padding: 0; }
-        nav li { margin: 3px 0; padding: 7px 10px; color: rgba(255,255,255,0.5);  }
-        nav li:hover { background-color: rgba(255,255,255,0.1); border-radius: 3px; cursor: pointer;  color: rgba(255,255,255,0.75);  }
-        nav li a { text-decoration: none; display: block; }
-        
-        section { flex-grow: 1; padding: 15px 30px; }
-        article {
-            background-color: rgba(47,79,79,0.1);
-            padding: 15px;
-        }
-        
-        /*TITLE CARD*/
-        .lf-title-card-container{
-	        width: 100%;
-        }
-        
-        .lf-title-card{
-            width: 210px;
-	        height: 295px;
-            position: relative;
-            display: inline-block;
-            overflow: hidden;
-            margin: 10px 10px;
-            -webkit-transition: all 200ms ease-in;
-            -webkit-transform: scale(1);
-            -ms-transition: all 200ms ease-in;
-            -ms-transform: scale(1);
-            -moz-transition: all 200ms ease-in;
-            -moz-transform: scale(1);
-            transition: all 200ms ease-in;
-            transform: scale(1);
-        }
-        
-        .lf-title-card.missing{
-            background-color: #df773d;
-        }
+	<title>Lanflix Component Playground</title>
+	<!--fontAwesome-->
+	<script src="https://use.fontawesome.com/0739902f59.js"></script>
+	<style>
+		html, body { padding: 0; margin: 0; font-family: Arial, Helvetica, sans-serif; height: 100%; overflow: hidden;}
+		body { display: flex; }
+		
+		a { color: inherit; }
+		h2 { margin-top: 30px; }
+		
+		section, nav { padding: 10px; overflow-y: auto;}
+		nav {
+			background-color: darkslategrey;
+			width: 15%;
+			min-width: 200px;
+			color: white;
+			
+		}
+		
+		nav h3 { background-color: rgba(0,0,0,0.5); padding: 10px 20px; margin: 0 -10px; color: rgba(255,255,255,1); font-weight: 100;  }
+		nav ul { list-style: none; padding: 0; }
+		nav li { margin: 3px 0; padding: 7px 10px; color: rgba(255,255,255,0.5);  }
+		nav li:hover { background-color: rgba(255,255,255,0.1); border-radius: 3px; cursor: pointer;  color: rgba(255,255,255,0.75);  }
+		nav li a { text-decoration: none; display: block; }
+		
+		section { flex-grow: 1; padding: 15px 30px; }
+		article {
+			background-color: rgba(47,79,79,0.1);
+			padding: 15px;
+		}
+		
+		/*TITLE CARD*/
+		.lf-title-card-container{
+			width: 100%;
+		}
+		
+		.lf-title-card{
+			width: 210px;
+			height: 295px;
+			position: relative;
+			display: inline-block;
+			overflow: hidden;
+			margin: 10px 10px;
+			-webkit-transition: all 200ms ease-in;
+			-webkit-transform: scale(1);
+			-ms-transition: all 200ms ease-in;
+			-ms-transform: scale(1);
+			-moz-transition: all 200ms ease-in;
+			-moz-transform: scale(1);
+			transition: all 200ms ease-in;
+			transform: scale(1);
+		}
+		
+		.lf-title-card.missing{
+			background-color: #df773d;
+		}
 
-        .lf-missing-icon{
-            font-size: 206px;
-            left: 8%;
-            top: 12%;
-            color: #ff0e1d;
-            z-index: 1;
-            position: absolute;
-             opacity: .5;
-        }
+		.lf-missing-icon{
+			font-size: 206px;
+			left: 8%;
+			top: 12%;
+			color: #ff0e1d;
+			z-index: 1;
+			position: absolute;
+			 opacity: .5;
+		}
 
-        .lf-title-card:hover{
-            box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.39);
-            z-index: 2;
-            -webkit-transition: all 200ms ease-in;
-            -webkit-transform: scale(1.1);
-            -ms-transition: all 200ms ease-in;
-            -ms-transform: scale(1.1);
-            -moz-transition: all 200ms ease-in;
-            -moz-transform: scale(1.1);
-            transition: all 200ms ease-in;
-            transform: scale(1.1);
-        }
+		.lf-title-card:hover{
+			box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.39);
+			z-index: 2;
+			-webkit-transition: all 200ms ease-in;
+			-webkit-transform: scale(1.1);
+			-ms-transition: all 200ms ease-in;
+			-ms-transform: scale(1.1);
+			-moz-transition: all 200ms ease-in;
+			-moz-transform: scale(1.1);
+			transition: all 200ms ease-in;
+			transform: scale(1.1);
+		}
 
-        .lf-play-btn{
-            font-size: 98px;
-            left: 30%;
-            top: 31%;
-            color: #FFFFFF;
-            position: absolute;
-            opacity: 0;
-            z-index: 3;
-        }
-        
-        .lf-title-card:hover .lf-play-btn{
-            animation: fade-in 500ms linear forwards;
-        }
-        
-        @keyframes fade-in {
-            0%{ opacity: 0 }
-            100% { opacity: 1 }
-        }
+		.lf-play-btn{
+			font-size: 98px;
+			left: 30%;
+			top: 31%;
+			color: #FFFFFF;
+			position: absolute;
+			opacity: 0;
+			z-index: 3;
+		}
+		
+		.lf-title-card:hover .lf-play-btn{
+			animation: fade-in 500ms linear forwards;
+		}
+		
+		@keyframes fade-in {
+			0%{ opacity: 0 }
+			100% { opacity: 1 }
+		}
 
-        .lf-title{
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.81);
-            position: absolute;
-            color: #FFFFFF;
-            font-weight: bold;
-            bottom: 0;
-            left: 0;
-            padding: 10px;
-        }
-        
-        .lf-cover{
-            width: 100%;
-        }
-        
-        .preview { display: flex; }
-        .preview > div {
-            flex-grow: 1;
-        }
-        
-        .preview > :first-child { margin-right: 7px; }
-        .preview > :last-child { margin-left: 7px; }
-    </style>
-    
-    <!-- External CSS Resources -->
-    <link rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
-    
-    <!-- Components CSS -->
-    <link rel="stylesheet" href="../components/basic/button.css">
-    <link rel="stylesheet" href="../components/gh-fork-ribbon/gh-fork-ribbon.css">
-    
-    <!-- External JS Resources -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script defer>hljs.initHighlightingOnLoad();</script>
-    
-    <!-- Components Javascript -->
-    <script src="../components/gh-fork-ribbon/gh-fork-ribbon.js" defer></script>
+		.lf-title{
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.81);
+			position: absolute;
+			color: #FFFFFF;
+			font-weight: bold;
+			bottom: 0;
+			left: 0;
+			padding: 10px;
+		}
+		
+		.lf-cover{
+			width: 100%;
+		}
+		
+		.preview { display: flex; }
+		.preview > div {
+			flex-grow: 1;
+		}
+		
+		.preview > :first-child { margin-right: 7px; }
+		.preview > :last-child { margin-left: 7px; }
+	</style>
+	
+	<!-- External CSS Resources -->
+	<link rel="stylesheet"
+		  href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+	
+	<!-- Components CSS -->
+	<link rel="stylesheet" href="../components/basic/button.css">
+	<link rel="stylesheet" href="../components/gh-fork-ribbon/gh-fork-ribbon.css">
+	
+	<!-- External JS Resources -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script defer>hljs.initHighlightingOnLoad();</script>
+	
+	<!-- Components Javascript -->
+	<script src="../components/gh-fork-ribbon/gh-fork-ribbon.js" defer></script>
 </head>
 
 <body>
 <nav>
-    <h3>Basic Components</h3>
-    <ul>
-        <li><a href="#lf-button">lf-button</a></li>
-    </ul>
-    
-    <h3>Other Components</h3>
-    <ul>
-        <li><a href="#lf-gh-fork-ribbon">lf-gh-fork-ribbon</a></li>
-        <li><a href="#lf-title-card">.lf-title-card</a></li>
-    </ul>
-    
-    <h3>Video Components</h3>
-    <ul>
-    
-    </ul>
-    
-    <h3>Title Card</h3>
-    <ul>
-    
-    </ul>
+	<h3>Basic Components</h3>
+	<ul>
+		<li><a href="#lf-button">lf-button</a></li>
+	</ul>
+	
+	<h3>Other Components</h3>
+	<ul>
+		<li><a href="#lf-gh-fork-ribbon">lf-gh-fork-ribbon</a></li>
+		<li><a href="#lf-title-card">.lf-title-card</a></li>
+	</ul>
+	
+	<h3>Video Components</h3>
+	<ul>
+	
+	</ul>
+	
+	<h3>Title Card</h3>
+	<ul>
+	
+	</ul>
 
 </nav>
 <section>
-    <h1>Components</h1>
-    <p>An overview of all developed components and how to use them</p>
-    
-    <h2>Basic Components</h2>
-    <article>
-        <a name="lf-button"></a>
-        <h3>.lf-button</h3>
-        <p>Lanflix button design (just an example, needs to be reworked)</p>
-        
-        <div class="preview">
-            <div>
-                <h4>Usage</h4>
-                <pre><code class="html hjs">
+	<h1>Components</h1>
+	<p>An overview of all developed components and how to use them</p>
+	
+	<h2>Basic Components</h2>
+	<article>
+		<a name="lf-button"></a>
+		<h3>.lf-button</h3>
+		<p>Lanflix button design (just an example, needs to be reworked)</p>
+		
+		<div class="preview">
+			<div>
+				<h4>Usage</h4>
+				<pre><code class="html hjs">
 &lt;button class="lf-button"&gt;Click me&lt;/button&gt;
-                            </code></pre>
-            </div>
-            
-            <div>
-                <h4>Result</h4>
-                <button class="lf-button">Click me </button></div>
-        </div>
-        </div>
-    </article>
-    <h2>Other Components</h2>
-    <article>
-        <a name="lf-gh-fork-ribbon"></a>
-        <h3>.lf-gh-fork-ribbon</h3>
-        <p>Displays the Github fork ribbon</p>
-        
-        <div class="preview">
-            <div>
-                <h4>Usage</h4>
-                <pre><code class="html hjs">
+							</code></pre>
+			</div>
+			
+			<div>
+				<h4>Result</h4>
+				<button class="lf-button">Click me </button></div>
+		</div>
+		</div>
+	</article>
+	<h2>Other Components</h2>
+	<article>
+		<a name="lf-gh-fork-ribbon"></a>
+		<h3>.lf-gh-fork-ribbon</h3>
+		<p>Displays the Github fork ribbon</p>
+		
+		<div class="preview">
+			<div>
+				<h4>Usage</h4>
+				<pre><code class="html hjs">
 &lt;div class="lf-gh-fork-ribbon"&gt;&lt;/div&gt;
-                        </code></pre>
-            </div>
-            
-            <div>
-                <h4>Result</h4>
-                <div class="lf-gh-fork-ribbon"></div>
-            </div>
-        </div>
-    </article>
-    
-    <article>
-        <a name="lf-title-card"></a>
-        <h3>.lf-title-card</h3>
-        <p>Displays the video graphic and name</p>
-        
-        <div class="preview">
-            <h4>Usage</h4>
-            <div>
-                <h4>Usage For Normal Card</h4>
-                <pre><code class="html hjs">
+						</code></pre>
+			</div>
+			
+			<div>
+				<h4>Result</h4>
+				<div class="lf-gh-fork-ribbon"></div>
+			</div>
+		</div>
+	</article>
+	
+	<article>
+		<a name="lf-title-card"></a>
+		<h3>.lf-title-card</h3>
+		<p>Displays the video graphic and name</p>
+		
+		<div class="preview">
+			<h4>Usage</h4>
+			<div>
+				<h4>Usage For Normal Card</h4>
+				<pre><code class="html hjs">
 &lt;div class=&quot;lf-title-card&quot;&gt;&lt;br /&gt;
   &lt;i class=&quot;lf-play-btn fa fa-play-circle-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;br /&gt;
   &lt;div class=&quot;lf-title&quot;&gt;Rick and Morty&lt;/div&gt;&lt;br /&gt;
   &lt;img class=&quot;lf-cover&quot; src=&quot;image_source&quot;&gt;&lt;br /&gt;
 &lt;/div&gt;
-                        </code></pre>
-	            <h4>Usage For Missing Info</h4>
-	            <pre><code class="html hjs">
+						</code></pre>
+				<h4>Usage For Missing Info</h4>
+				<pre><code class="html hjs">
 &lt;div class=&quot;lf-title-card missing&quot;&gt;
   &lt;i class=&quot;lf-play-btn fa fa-play-circle-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
   &lt;div class=&quot;lf-title&quot;&gt;Missing Movie Info&lt;/div&gt;
   &lt;i class=&quot;lf-missing-icon fa fa-exclamation-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
 &lt;/div&gt;
-		            </code></pre>
-            </div>
-            <div class="lf-title-card-container">
-                <div class="lf-title-card">
-                    <i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
-                    <div class="lf-title">Rick and Morty</div>
-                    <img class="lf-cover" src="https://static.tvmaze.com/uploads/images/medium_portrait/1/3603.jpg">
-                </div>
-            
-                <div class="lf-title-card missing">
-                    <i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
-                    <div class="lf-title">Missing Movie Info</div>
-                    <i class="lf-missing-icon fa fa-exclamation-circle" aria-hidden="true"></i>
-                </div>
-            
-                <div class="lf-title-card">
-                    <i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
-                    <div class="lf-title">Lethal Weapon</div>
-                    <img class="lf-cover" src="http://static.tvmaze.com/uploads/images/medium_portrait/93/234808.jpg">
-                </div>
-	            <div class="lf-title-card">
-		            <i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
-		            <div class="lf-title">Riverdale</div>
-		            <img class="lf-cover" src="http://static.tvmaze.com/uploads/images/medium_portrait/125/313388.jpg">
-	            </div>
-                </div>
-            </div>
-    </article>
-    
-    
-    <h2>Video Components</h2>
+					</code></pre>
+			</div>
+			<div class="lf-title-card-container">
+				<div class="lf-title-card">
+					<i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
+					<div class="lf-title">Rick and Morty</div>
+					<img class="lf-cover" src="https://static.tvmaze.com/uploads/images/medium_portrait/1/3603.jpg">
+				</div>
+			
+				<div class="lf-title-card missing">
+					<i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
+					<div class="lf-title">Missing Movie Info</div>
+					<i class="lf-missing-icon fa fa-exclamation-circle" aria-hidden="true"></i>
+				</div>
+			
+				<div class="lf-title-card">
+					<i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
+					<div class="lf-title">Lethal Weapon</div>
+					<img class="lf-cover" src="http://static.tvmaze.com/uploads/images/medium_portrait/93/234808.jpg">
+				</div>
+				<div class="lf-title-card">
+					<i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
+					<div class="lf-title">Riverdale</div>
+					<img class="lf-cover" src="http://static.tvmaze.com/uploads/images/medium_portrait/125/313388.jpg">
+				</div>
+				</div>
+			</div>
+	</article>
+	
+	
+	<h2>Video Components</h2>
 
 </section>
 
