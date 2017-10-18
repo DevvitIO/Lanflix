@@ -1,3 +1,5 @@
 module.exports = {
-    dbName: 'lanflix'
+    dbName: 'lanflix',
+    host: 'localhost',
+    port: 27017
 }
