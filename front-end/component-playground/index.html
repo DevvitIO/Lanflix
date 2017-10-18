@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Lanflix Component Playground</title>
+    <!--fontAwesome-->
+    <script src="https://use.fontawesome.com/0739902f59.js"></script>
     <style>
         html, body { padding: 0; margin: 0; font-family: Arial, Helvetica, sans-serif; height: 100%; overflow: hidden;}
         body { display: flex; }
@@ -31,19 +33,73 @@
         }
         
         /*TITLE CARD*/
+        .lf-title-card-container{
+	        width: 100%;
+        }
+        
         .lf-title-card{
             width: 210px;
+	        height: 295px;
             position: relative;
             display: inline-block;
             overflow: hidden;
             margin: 10px 10px;
-            -webkit-transition: all .05s;
-            -moz-transition: all .05s;
-            -ms-transition: all .05s;
-            -o-transition: all .05s;
-            transition: all .05s;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 200ms ease-in;
+            transform: scale(1);
         }
         
+        .lf-title-card.missing{
+            background-color: #df773d;
+        }
+
+        .lf-missing-icon{
+            font-size: 206px;
+            left: 8%;
+            top: 12%;
+            color: #ff0e1d;
+            z-index: 1;
+            position: absolute;
+             opacity: .5;
+        }
+
+        .lf-title-card:hover{
+            box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.39);
+            z-index: 2;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1.1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1.1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1.1);
+            transition: all 200ms ease-in;
+            transform: scale(1.1);
+        }
+
+        .lf-play-btn{
+            font-size: 98px;
+            left: 30%;
+            top: 31%;
+            color: #FFFFFF;
+            position: absolute;
+            opacity: 0;
+            z-index: 3;
+        }
+        
+        .lf-title-card:hover .lf-play-btn{
+            animation: fade-in 500ms linear forwards;
+        }
+        
+        @keyframes fade-in {
+            0%{ opacity: 0 }
+            100% { opacity: 1 }
+        }
+
         .lf-title{
             width: 100%;
             background-color: rgba(0, 0, 0, 0.81);
@@ -57,11 +113,6 @@
         
         .lf-cover{
             width: 100%;
-        }
-        
-        .lf-title-card:hover{
-            width: 225px;
-            margin: 10px 15px;
         }
         
         .preview { display: flex; }
@@ -78,15 +129,15 @@
           href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
     
     <!-- Components CSS -->
-    <link rel="stylesheet" href="./components/basic/button.css">
-    <link rel="stylesheet" href="./components/gh-fork-ribbon/gh-fork-ribbon.css">
+    <link rel="stylesheet" href="../components/basic/button.css">
+    <link rel="stylesheet" href="../components/gh-fork-ribbon/gh-fork-ribbon.css">
     
     <!-- External JS Resources -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script defer>hljs.initHighlightingOnLoad();</script>
     
     <!-- Components Javascript -->
-    <script src="./components/gh-fork-ribbon/gh-fork-ribbon.js" defer></script>
+    <script src="../components/gh-fork-ribbon/gh-fork-ribbon.js" defer></script>
 </head>
 
 <body>
@@ -99,6 +150,7 @@
     <h3>Other Components</h3>
     <ul>
         <li><a href="#lf-gh-fork-ribbon">lf-gh-fork-ribbon</a></li>
+        <li><a href="#lf-title-card">.lf-title-card</a></li>
     </ul>
     
     <h3>Video Components</h3>
@@ -158,17 +210,55 @@
     </article>
     
     <article>
-        <style>
-        </style>
-        <h3>Title Card</h3>
-        <div class="lf-title-card">
-            <div class="lf-title">Rico and Morty</div>
-            <img class="lf-cover" src="https://static.tvmaze.com/uploads/images/medium_portrait/1/3603.jpg">
-        </div>
-        <div class="lf-title-card">
-            <div class="lf-title">Rico and Morty</div>
-            <img class="lf-cover" src="https://static.tvmaze.com/uploads/images/medium_portrait/1/3603.jpg">
-        </div>
+        <a name="lf-title-card"></a>
+        <h3>.lf-title-card</h3>
+        <p>Displays the video graphic and name</p>
+        
+        <div class="preview">
+            <h4>Usage</h4>
+            <div>
+                <h4>Usage For Normal Card</h4>
+                <pre><code class="html hjs">
+&lt;div class=&quot;lf-title-card&quot;&gt;&lt;br /&gt;
+  &lt;i class=&quot;lf-play-btn fa fa-play-circle-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;br /&gt;
+  &lt;div class=&quot;lf-title&quot;&gt;Rick and Morty&lt;/div&gt;&lt;br /&gt;
+  &lt;img class=&quot;lf-cover&quot; src=&quot;image_source&quot;&gt;&lt;br /&gt;
+&lt;/div&gt;
+                        </code></pre>
+	            <h4>Usage For Missing Info</h4>
+	            <pre><code class="html hjs">
+&lt;div class=&quot;lf-title-card missing&quot;&gt;
+  &lt;i class=&quot;lf-play-btn fa fa-play-circle-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;lf-title&quot;&gt;Missing Movie Info&lt;/div&gt;
+  &lt;i class=&quot;lf-missing-icon fa fa-exclamation-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+		            </code></pre>
+            </div>
+            <div class="lf-title-card-container">
+                <div class="lf-title-card">
+                    <i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
+                    <div class="lf-title">Rick and Morty</div>
+                    <img class="lf-cover" src="https://static.tvmaze.com/uploads/images/medium_portrait/1/3603.jpg">
+                </div>
+            
+                <div class="lf-title-card missing">
+                    <i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
+                    <div class="lf-title">Missing Movie Info</div>
+                    <i class="lf-missing-icon fa fa-exclamation-circle" aria-hidden="true"></i>
+                </div>
+            
+                <div class="lf-title-card">
+                    <i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
+                    <div class="lf-title">Lethal Weapon</div>
+                    <img class="lf-cover" src="http://static.tvmaze.com/uploads/images/medium_portrait/93/234808.jpg">
+                </div>
+	            <div class="lf-title-card">
+		            <i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
+		            <div class="lf-title">Riverdale</div>
+		            <img class="lf-cover" src="http://static.tvmaze.com/uploads/images/medium_portrait/125/313388.jpg">
+	            </div>
+                </div>
+            </div>
     </article>
     
     
