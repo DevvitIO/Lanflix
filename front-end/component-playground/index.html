@@ -32,89 +32,6 @@
 			padding: 15px;
 		}
 		
-		/*TITLE CARD*/
-		.lf-title-card-container{
-			width: 100%;
-		}
-		
-		.lf-title-card{
-			width: 210px;
-			height: 295px;
-			position: relative;
-			display: inline-block;
-			overflow: hidden;
-			margin: 10px 10px;
-			-webkit-transition: all 200ms ease-in;
-			-webkit-transform: scale(1);
-			-ms-transition: all 200ms ease-in;
-			-ms-transform: scale(1);
-			-moz-transition: all 200ms ease-in;
-			-moz-transform: scale(1);
-			transition: all 200ms ease-in;
-			transform: scale(1);
-		}
-		
-		.lf-title-card.missing{
-			background-color: #df773d;
-		}
-
-		.lf-missing-icon{
-			font-size: 206px;
-			left: 8%;
-			top: 12%;
-			color: #ff0e1d;
-			z-index: 1;
-			position: absolute;
-			 opacity: .5;
-		}
-
-		.lf-title-card:hover{
-			box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.39);
-			z-index: 2;
-			-webkit-transition: all 200ms ease-in;
-			-webkit-transform: scale(1.1);
-			-ms-transition: all 200ms ease-in;
-			-ms-transform: scale(1.1);
-			-moz-transition: all 200ms ease-in;
-			-moz-transform: scale(1.1);
-			transition: all 200ms ease-in;
-			transform: scale(1.1);
-		}
-
-		.lf-play-btn{
-			font-size: 98px;
-			left: 30%;
-			top: 31%;
-			color: #FFFFFF;
-			position: absolute;
-			opacity: 0;
-			z-index: 3;
-		}
-		
-		.lf-title-card:hover .lf-play-btn{
-			animation: fade-in 500ms linear forwards;
-		}
-		
-		@keyframes fade-in {
-			0%{ opacity: 0 }
-			100% { opacity: 1 }
-		}
-
-		.lf-title{
-			width: 100%;
-			background-color: rgba(0, 0, 0, 0.81);
-			position: absolute;
-			color: #FFFFFF;
-			font-weight: bold;
-			bottom: 0;
-			left: 0;
-			padding: 10px;
-		}
-		
-		.lf-cover{
-			width: 100%;
-		}
-		
 		.preview { display: flex; }
 		.preview > div {
 			flex-grow: 1;
@@ -131,6 +48,7 @@
 	<!-- Components CSS -->
 	<link rel="stylesheet" href="../components/basic/button.css">
 	<link rel="stylesheet" href="../components/gh-fork-ribbon/gh-fork-ribbon.css">
+	<link rel="stylesheet" href="../components/basic/title-card.css">
 	
 	<!-- External JS Resources -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
