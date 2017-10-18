@@ -7,7 +7,7 @@ This is a learning and teaching project, it is a place for aspiring developers t
 ## Contributing
 To contribute to the project please take a look at the [open issues](https://github.com/DevvitIO/Lanflix/issues) and if you find something you want to implement let us know in the issue. To prevent conflicts please let us know before you start fixing an issue. There may also be some issues where additional clarification regarding its requirements is needed. After your implementation is complete, please submit a Pull Request (PR, [How to PR?](https://guides.github.com/introduction/flow/)) and one of our other members will review and merge it into the project. Most issues should be labelled with the experience level and some additional information. 
 
-If you need help with an issue or something else please let us know either on [Github]() or [Discord](https://discordapp.com/invite/erPjG7C)
+If you need help with an issue or something else please let us know either on [Github](https://github.com/DevvitIO) or [Discord](https://discordapp.com/invite/erPjG7C). We are happy for outside contributors, but we would like you to [join](https://orgmanager.miguelpiedrafita.com/join/32555830) the devvit community
 
 ## Features for Version 1.0
 For a more detailed look of the features and their status please take a look at the[issues](https://github.com/DevvitIO/Lanflix/issues) and the project documentation \[[1](),[2](https://github.com/DevvitIO/Lanflix/projects/1)\]
