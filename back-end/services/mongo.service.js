@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 var mongoConfig = require('../config/mongo');
-var dbURI = `mongodb://localhost/${mongoConfig.dbName}`;
+var dbURI = `mongodb://${mongoConfig.host}:${mongoConfig.port}/${mongoConfig.dbName}`;
 
 var MongoService = {
     init: init
