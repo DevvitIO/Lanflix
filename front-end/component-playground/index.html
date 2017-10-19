@@ -131,6 +131,8 @@
 		<a name="lf-title-card"></a>
 		<h3>.lf-title-card</h3>
 		<p>Displays the video graphic and name</p>
+
+		<h5>image_src can be left blank to show default cover.</h5>
 		
 		<div class="preview">
 			<div>
@@ -139,40 +141,43 @@
 &lt;div class=&quot;lf-title-card&quot;&gt;&lt;br /&gt;
   &lt;i class=&quot;lf-play-btn fa fa-play-circle-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;br /&gt;
   &lt;div class=&quot;lf-title&quot;&gt;Rick and Morty&lt;/div&gt;&lt;br /&gt;
-  &lt;img class=&quot;lf-cover&quot; src=&quot;image_source&quot;&gt;&lt;br /&gt;
+  &lt;object class=&quot;lf-cover&quot; data=&quot;image_source&quot;&gt;
+    &lt;i class=&quot;lf-missing-icon fa fa-exclamation-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/object&gt;
 &lt;/div&gt;
 						</code></pre>
-				<h5>Usage For Missing Info</h5>
-				<pre><code class="html hjs">
-&lt;div class=&quot;lf-title-card missing&quot;&gt;
-  &lt;i class=&quot;lf-play-btn fa fa-play-circle-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-  &lt;div class=&quot;lf-title&quot;&gt;Missing Movie Info&lt;/div&gt;
-  &lt;i class=&quot;lf-missing-icon fa fa-exclamation-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-&lt;/div&gt;
-					</code></pre>
 			</div>
 			<div>
 				<div class="lf-title-card">
 					<i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
 					<div class="lf-title">Rick and Morty</div>
-					<img class="lf-cover" src="https://static.tvmaze.com/uploads/images/medium_portrait/1/3603.jpg">
+					<object class="lf-cover" data="https://static.tvmaze.com/uploads/images/medium_portrait/1/3603.jpg">
+						<i class="lf-missing-icon fa fa-exclamation-circle" aria-hidden="true"></i>
+					</object>
 				</div>
-			
-				<div class="lf-title-card missing">
+
+				<div class="lf-title-card">
 					<i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
 					<div class="lf-title">Missing Movie Info</div>
-					<i class="lf-missing-icon fa fa-exclamation-circle" aria-hidden="true"></i>
+					<object class="lf-cover" data="" type="image/png">
+						<i class="lf-missing-icon fa fa-exclamation-circle" aria-hidden="true"></i>
+					</object>
 				</div>
-			
+
 				<div class="lf-title-card">
 					<i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
 					<div class="lf-title">Lethal Weapon</div>
-					<img class="lf-cover" src="http://static.tvmaze.com/uploads/images/medium_portrait/93/234808.jpg">
+					<object class="lf-cover" data="http://static.tvmaze.com/uploads/images/medium_portrait/93/234808.jpg">
+						<i class="lf-missing-icon fa fa-exclamation-circle" aria-hidden="true"></i>
+					</object>
 				</div>
+
 				<div class="lf-title-card">
 					<i class="lf-play-btn fa fa-play-circle-o" aria-hidden="true"></i>
 					<div class="lf-title">Riverdale</div>
-					<img class="lf-cover" src="http://static.tvmaze.com/uploads/images/medium_portrait/125/313388.jpg">
+					<object class="lf-cover" data="http://static.tvmaze.com/uploads/images/medium_portrait/125/313388.jpg">
+						<i class="lf-missing-icon fa fa-exclamation-circle" aria-hidden="true"></i>
+					</object>
 				</div>
 				</div>
 			</div>

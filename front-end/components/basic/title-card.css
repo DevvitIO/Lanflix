@@ -14,9 +14,6 @@
     -moz-transform: scale(1);
     transition: all 200ms ease-in;
     transform: scale(1);
-}
-
-.lf-title-card.missing{
     background-color: #df773d;
 }
 
