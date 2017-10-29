@@ -1,5 +1,6 @@
 var models = {
-    Movie: require('./movie.model')
+    Movie: require('./movie.model'),
+    Serie: require('./serie.model')
 }
 
 module.exports = models;
