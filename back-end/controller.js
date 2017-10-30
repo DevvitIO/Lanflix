@@ -1,7 +1,7 @@
 var path = require('path');
 var mongoose = require('mongoose');
 
-var Serie = require('./models').Serie;
+var Series = require('./models').Series;
 
 var controllers = {
     index: index,
@@ -19,9 +19,9 @@ function playground(req, res) {
 }
 
 function series(req, res) {
-    Serie.find(function(err, series) {
+    Series.find(function(err, series) {
         if(err) {
-            res.sendStatus(404);
+            res.sendStatus(500);
         } else {
             res.send(series);
         }
