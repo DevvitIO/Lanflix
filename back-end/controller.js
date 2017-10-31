@@ -6,7 +6,8 @@ var Series = require('./models').Series;
 var controllers = {
     index: index,
     playground: playground,
-    series: series
+    series: series,
+    seriesId: seriesId
 };
 
 function index(req, res) {
@@ -20,6 +21,16 @@ function playground(req, res) {
 
 function series(req, res) {
     Series.find(function(err, series) {
+        if(err) {
+            res.sendStatus(500);
+        } else {
+            res.send(series);
+        }
+    })
+}
+
+function seriesId(req, res) {
+    Series.findById(req.params.id, function(err, series) {
         if(err) {
             res.sendStatus(500);
         } else {
