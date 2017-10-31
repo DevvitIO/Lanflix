@@ -7,7 +7,7 @@ var controllers = {
     index: index,
     playground: playground,
     series: series,
-    seriesId: seriesId
+    seriesById: seriesById
 };
 
 function index(req, res) {
@@ -29,8 +29,12 @@ function series(req, res) {
     })
 }
 
-function seriesId(req, res) {
-    Series.findById(req.params.id, function(err, series) {
+function seriesById(req, res) {
+    var seriesId = req.params.id;
+    if(!mongoose.Types.ObjectId.isValid(seriesId)) {
+        return res.status(400).send("The provided series id is invalid!");
+    }
+    Series.findById(seriesId, function(err, series) {
         if(err) {
             res.sendStatus(500);
         } else {
