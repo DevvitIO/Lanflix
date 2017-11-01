@@ -5,6 +5,7 @@ function initRoutes(app) {
     app.get('/playground', controller.playground);
     app.get('/series', controller.series);
     app.get('/series/:id', controller.seriesById);
+    app.get('/series/:id/episodes', controller.episodes);
 }
 
 module.exports = initRoutes;
