@@ -1,4 +1,5 @@
 var express = require('express');
+var reload = require('reload');
 var MongoService = require('./services/mongo.service');
 
 
@@ -13,6 +14,8 @@ function _initExpressApp(port) {
     var routes = require('./routes')(app);
     
     app.listen(port);
+
+    reload(app);
 
     return app;
 }
