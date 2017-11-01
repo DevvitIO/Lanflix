@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./back-end --ext js,css,html --watch front-end",
+    "prestart": "npm install",
+    "start": "nodemon ./back-end --ext js,css,html --watch front-end --watch back-end",
     "postinstall": "cd back-end && npm install"
   },
   "repository": {
