@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Series = require('../models').Series;
+const Movies = require('../models').Movie;
 
 module.exports = {
   series(req, res) {
@@ -8,6 +9,16 @@ module.exports = {
               res.sendStatus(500);
           } else {
               res.send(series);
+          }
+      })
+  },
+
+  movies(req, res) {
+      Movies.find(function(err, movies) {
+          if(err) {
+              res.sendStatus(500);
+          } else {
+              res.send(movies);
           }
       })
   },
