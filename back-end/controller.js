@@ -1,10 +1,12 @@
 var path = require('path');
 var mongoose = require('mongoose');
 
+var Categories = require('./models').Categories;
 var Series = require('./models').Series;
 
 var controllers = {
     index: index,
+    categories: categories,
     playground: playground,
     series: series,
     seriesById: seriesById,
@@ -13,6 +15,16 @@ var controllers = {
 
 function index(req, res) {
     res.sendFile(__dirname + '/front-end/index.html');
+}
+
+function categories(req, res) {
+    Categories.find(function(err, categories) {
+        if(err) {
+            res.sendStatus(500);
+        } else {
+            res.send(categories);
+        }
+    })
 }
 
 function playground(req, res) {
