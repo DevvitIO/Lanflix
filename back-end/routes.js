@@ -12,6 +12,7 @@ function initRoutes(app) {
     app.get('/series', SeriesMovieController.series);
     app.get('/series/:id', SeriesMovieController.seriesById);
     app.get('/series/:id/episodes', SeriesMovieController.episodes);
+    app.get('/series/:id/episodes/:eid', SeriesMovieController.episodesByEid);
     app.get('/movies', SeriesMovieController.movies);
 }
 

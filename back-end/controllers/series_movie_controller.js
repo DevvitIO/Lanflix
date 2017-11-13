@@ -49,5 +49,22 @@ module.exports = {
               res.send(series.episodes);
           }
       })
+  },
+
+  episodesByEid(req, res) {
+    var seriesId = req.params.id;
+    var episodeId = req.params.eid;
+    if(!mongoose.Types.ObjectId.isValid(seriesId)) {
+        return res.status(400).send("The provided series id is invalid!");
+    } else if(!mongoose.Types.ObjectId.isValid(episodeId)) {
+        return res.status(400).send("The provided episode id is invalid!");
+    }
+    Series.findById(seriesId, function (err, series) {
+        if(err) {
+            res.sendStatus(500);
+        } else {
+            res.send(series.episodes.id(episodeId));
+        }
+    })
   }
 }
