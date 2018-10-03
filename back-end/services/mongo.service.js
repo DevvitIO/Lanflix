@@ -19,7 +19,7 @@ function _disconnect() {
 
 function _initConnection() {
     // Create the database connection
-    mongoose.connect(dbURI, { useMongoClient: true });
+    mongoose.connect(dbURI, {});
 
     // CONNECTION EVENTS
     // When successfully connected
