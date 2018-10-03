@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/LearnDevelopmentPublic/Lanflix#readme",
   "devDependencies": {
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.18.4"
   }
 }
