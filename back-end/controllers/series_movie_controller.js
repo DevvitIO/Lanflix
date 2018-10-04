@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Series = require('../models').Series;
 const Movies = require('../models').Movie;
-const request = require('request');
+var TVMazeService = require('../services/tvmaze.service');
 
 module.exports = {
   series(req, res) {
@@ -85,11 +85,6 @@ module.exports = {
 
   loadAdditionalSeriesDetails(req, res) {
       var showName = req.params.name;
-      request.get("http://api.tvmaze.com/search/shows?q="+ showName, (error, response, body) => {
-          if(error) {
-              return console.dir(error);
-          }
-          res.send(body);
-      });
+      TVMazeService.loadDataByName(showName).then((data) => res.send(data));
   }
 }
