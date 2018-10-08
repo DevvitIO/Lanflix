@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Series = require('../models').Series;
 const Movies = require('../models').Movie;
+var TVMazeService = require('../services/tvmaze.service');
 
 module.exports = {
   series(req, res) {
@@ -80,5 +81,10 @@ module.exports = {
             res.send(series.episodes.id(episodeId));
         }
     })
+  },
+
+  loadAdditionalSeriesDetails(req, res) {
+      var showName = req.params.name;
+      TVMazeService.loadDataByName(showName).then((data) => res.send(data));
   }
 }
